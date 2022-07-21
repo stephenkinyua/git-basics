@@ -16,9 +16,22 @@ Tip => Last commit in the branch
 ###### Commands
 
 `git branch` => List branches \
-`git branch branch-name` => Create a branch name \
+`git branch branch-name` => Create a new branch based upon the current HEAD and give it a branch name \
+`git checkout -b branch-name` => Create a branch and switch to the branch immediately
+`git switch -c branch-name` => Create a branch and switch to the branch immediately
 
 ###### Switching Between Branches
 
 `git checkout branch-name` => Switch to a branch \
 `git switch branch-name` => Switch to a branch \
+
+###### Deleting Branches
+
+`git branch --delete` => Delete a branch
+`git branch -d branch-name` => Delete a branch (shorthand)
+`git branch -D branch-name` => Delete a branch
+
+###### Rename a Branch
+
+1. Change to the branch we want to rename
+2. `git branch -m new-name` => Rename a branch
