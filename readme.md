@@ -17,4 +17,8 @@ Tip => Last commit in the branch
 
 `git branch` => List branches \
 `git branch branch-name` => Create a branch name \
+
+###### Switching Between Branches
+
 `git checkout branch-name` => Switch to a branch \
+`git switch branch-name` => Switch to a branch \
