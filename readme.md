@@ -12,10 +12,11 @@ Git
 #### Branches
 
 Branches
-: => Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit
+: Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit
 HEAD
-: => Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer
-Tip => Last commit in the branch
+: Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer \
+Tip
+: Last commit in the branch
 
 ##### Commands
 
