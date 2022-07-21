@@ -1,37 +1,41 @@
 # Git Basics
 
 Learning git and github step by step
+Git
+: Version Control System
 
-##### Making Commits
+#### Making Commits
 
 `git add filename` => add a file to staging area \
 `git add .` => add all files in the directory to the staging area
 
-##### Branches
+#### Branches
 
-Branches => Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit
-HEAD => Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer
+Branches
+: => Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit
+HEAD
+: => Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer
 Tip => Last commit in the branch
 
-###### Commands
+##### Commands
 
 `git branch` => List branches \
 `git branch branch-name` => Create a new branch based upon the current HEAD and give it a branch name \
-`git checkout -b branch-name` => Create a branch and switch to the branch immediately
+`git checkout -b branch-name` => Create a branch and switch to the branch immediately \
 `git switch -c branch-name` => Create a branch and switch to the branch immediately
 
-###### Switching Between Branches
+##### Switching Between Branches
 
 `git checkout branch-name` => Switch to a branch \
-`git switch branch-name` => Switch to a branch \
+`git switch branch-name` => Switch to a branch
 
-###### Deleting Branches
+##### Deleting Branches
 
 `git branch --delete` => Delete a branch
 `git branch -d branch-name` => Delete a branch (shorthand)
 `git branch -D branch-name` => Delete a branch
 
-###### Rename a Branch
+##### Rename a Branch
 
 1. Change to the branch we want to rename
 2. `git branch -m new-name` => Rename a branch
