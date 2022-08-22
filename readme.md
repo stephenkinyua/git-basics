@@ -86,3 +86,46 @@ git diff --staged example.txt filename.txt
 ```
 
 ##### Git Stash
+
+- Save changes that u are not ready to commit (staged and unstaged) reverting the changes in your working copy
+
+```bash
+git stash or
+git stash save
+```
+
+- Take changes in the stash and re apply them in your current working copy ie continue from where you left off
+
+```bash
+git stash pop
+```
+
+- Take what is in the stash and apply what is stashed away without removing it from the stash
+
+```bash
+git stash apply
+```
+
+- List all stashed items
+
+```bash
+git stash list
+```
+
+- Apply a specific stash
+
+```bash
+git stash apply stash@{2}
+```
+
+- Drop or delete a specific stash
+
+```bash
+git stash drop stash@{2}
+```
+
+- Clear the stash
+
+```bash
+git stash clear
+```
