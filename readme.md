@@ -3,39 +3,77 @@
 Learning git and github step by step \
 Git : Version Control System
 
-#### Making Commits
+## Making Commits
 
-`git add filename` => add a file to staging area \
-`git add .` => add all files in the directory to the staging area
+- Add a file to staging area
 
-#### Branches
+```bash
+git add filename
+```
 
-Branches
-: Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit
-HEAD
-: Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer \
-Tip
-: Last commit in the branch
+- Add all files in the directory to the staging area
 
-##### Commands
+```bash
+git add .
+```
 
-`git branch` => List branches \
-`git branch branch-name` => Create a new branch based upon the current HEAD and give it a branch name \
-`git checkout -b branch-name` => Create a branch and switch to the branch immediately \
-`git switch -c branch-name` => Create a branch and switch to the branch immediately
+## Branches
 
-##### Switching Between Branches
+**Branches**: Some type of a bookmark in a book | The point which the branch is at | Reference to a certain commit \
+**HEAD**: Pointer to the current location that we are viewing at the moment. We cannot be at 2 points at the same time | Reference to a branch pointer \
+**Tip**: Last commit in the branch
 
-`git checkout branch-name` => Switch to a branch \
-`git switch branch-name` => Switch to a branch
+### Commands
 
-##### Deleting Branches
+- List all branches
 
-`git branch --delete` => Delete a branch
-`git branch -d branch-name` => Delete a branch (shorthand)
-`git branch -D branch-name` => Delete a branch
+```bash
+git branch
+```
 
-##### Rename a Branch
+- Create a new branch based upon the current HEAD and give it a branch name
+
+```bash
+git branch branch-name
+```
+
+- Create a branch and switch to the branch immediately
+
+```bash
+git checkout -b branch-name
+```
+
+- Create a branch and switch to the branch immediately
+
+```bash
+git switch -c branch-name
+```
+
+#### Switching Between Branches
+
+- Switch to a branch
+
+```bash
+git checkout branch-name or
+git switch branch-name
+```
+
+#### Deleting Branches
+
+- Delete a branch
+
+```bash
+git branch --delete branch-name or
+git branch -d branch-name
+```
+
+- FORCE Delete a branch
+
+```bash
+git branch -D branch-name
+```
+
+#### Rename a Branch
 
 1. Change to the branch we want to rename
 
@@ -43,7 +81,7 @@ Tip
 git branch -m new-name
 ```
 
-##### Git Diff
+## Git Diff
 
 Show changes between files between commits or the difference between files in the staging area and the working directory
 
@@ -79,13 +117,13 @@ git diff branch-one branch-two
 git diff commit..commit
 ```
 
-###### Git Diff: Narrow down to one file
+#### Git Diff: Narrow down to one file
 
 ```bash
 git diff --staged example.txt filename.txt
 ```
 
-##### Git Stash
+## Git Stash
 
 - Save changes that u are not ready to commit (staged and unstaged) reverting the changes in your working copy
 
