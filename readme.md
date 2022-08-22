@@ -1,8 +1,7 @@
 # Git Basics
 
-Learning git and github step by step
-Git
-: Version Control System
+Learning git and github step by step \
+Git : Version Control System
 
 #### Making Commits
 
@@ -39,7 +38,10 @@ Tip
 ##### Rename a Branch
 
 1. Change to the branch we want to rename
-2. `git branch -m new-name` => Rename a branch
+
+```bash
+git branch -m new-name
+```
 
 ##### Git Diff
 
@@ -64,8 +66,23 @@ git diff --staged or
 git diff --cached
 ```
 
+- Show changes between branches (Order Matters)
+
+```bash
+git diff branch-one..branch-two or
+git diff branch-one branch-two
+```
+
+- Show changes between commits
+
+```bash
+git diff commit..commit
+```
+
 ###### Git Diff: Narrow down to one file
 
 ```bash
 git diff --staged example.txt filename.txt
 ```
+
+##### Git Stash
