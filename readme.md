@@ -1,6 +1,6 @@
 # Git Basics
 
-Learning git and github step by step \
+Learning git and github **step by step** \
 Git : Version Control System
 
 ## Making Commits
@@ -8,7 +8,7 @@ Git : Version Control System
 - Add a file to staging area
 
 ```bash
-git add filename
+git add <filename>
 ```
 
 - Add all files in the directory to the staging area
@@ -34,19 +34,19 @@ git branch
 - Create a new branch based upon the current HEAD and give it a branch name
 
 ```bash
-git branch branch-name
+git branch <branch-name>
 ```
 
 - Create a branch and switch to the branch immediately
 
 ```bash
-git checkout -b branch-name
+git checkout -b <branch-name>
 ```
 
 - Create a branch and switch to the branch immediately
 
 ```bash
-git switch -c branch-name
+git switch -c <branch-name>
 ```
 
 #### Switching Between Branches
@@ -55,7 +55,7 @@ git switch -c branch-name
 
 ```bash
 git checkout branch-name or
-git switch branch-name
+git switch <branch-name>
 ```
 
 #### Deleting Branches
@@ -70,7 +70,7 @@ git branch -d branch-name
 - FORCE Delete a branch
 
 ```bash
-git branch -D branch-name
+git branch -D <branch-name>
 ```
 
 #### Rename a Branch
@@ -78,7 +78,7 @@ git branch -D branch-name
 1. Change to the branch we want to rename
 
 ```bash
-git branch -m new-name
+git branch -m <new-branch-name>
 ```
 
 ## Git Diff
@@ -166,4 +166,92 @@ git stash drop stash@{2}
 
 ```bash
 git stash clear
+```
+
+## Going Back In Time
+
+- Go back to a specific commit
+
+```bash
+git checkout <commit-hash>
+```
+
+- Re attach the HEAD by switching to a branch or creating a new branch
+
+```bash
+git switch <branchname>
+```
+
+### Using HEAD to Go Back in Time
+
+- Checkout parent commit
+
+```bash
+git checkout HEAD~1
+```
+
+- Checkout grandparent commit
+
+```bash
+git checkout HEAD~2
+```
+
+- Go back to the previous branch before you switched to the current HEAD
+
+```bash
+git swicth -
+```
+
+### Discarding Changes on a file with git checkout
+
+- Reset file contents back to when we made a commit (last commit)
+
+```bash
+git checkout HEAD filename or
+git checkout -- <filename>
+```
+
+### Working with git restore
+
+- Reset file contents back to when we made a commit (last commit)
+
+```bash
+git restore <filename>
+```
+
+- Reset file contents back to a specific commit
+
+```bash
+git restore --source HEAD~2 <filename> or
+git restore --source <commit-hash> <filename>
+```
+
+#### Unstage files with git restore
+
+- Unstage a file
+
+```bash
+git restore --staged <filename>
+```
+
+### Working with git reset
+
+- Reset the repo back to a specific commit without getting rid of the changes
+
+```bash
+git reset <commit-hash>
+```
+
+- Reset the repo back to a specific commit while removing the changes on the working directory
+
+```bash
+git reset --hard <commit-hash>
+```
+
+### Working with git revert
+
+- Revert a change from a commit while keeping the history of the commit. Commonly used when working in a team and the commit has already been pushed. This command **creates** a new commit in the process.
+
+```bash
+git revert <commit-hash>
 ```
