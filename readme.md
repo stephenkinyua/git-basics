@@ -40,3 +40,32 @@ Tip
 
 1. Change to the branch we want to rename
 2. `git branch -m new-name` => Rename a branch
+
+##### Git Diff
+
+Show changes between files between commits or the difference between files in the staging area and the working directory
+
+- Show all unstaged changes
+
+```bash
+git diff
+```
+
+- List all changes in the working tree since your last commit including staged and unstaged changes
+
+```bash
+git diff HEAD
+```
+
+- Show only staged changes. Difference btw the last commit and the files in the staging area
+
+```bash
+git diff --staged or
+git diff --cached
+```
+
+###### Git Diff: Narrow down to one file
+
+```bash
+git diff --staged example.txt filename.txt
+```
