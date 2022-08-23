@@ -255,3 +255,69 @@ git reset --hard <commit-hash>
 ```bash
 git revert <commit-hash>
 ```
+
+## Working with Remote Repositories (GITHUB)
+
+- View any existing remotes for your repo
+
+```bash
+git remote -v
+```
+
+- Add a new remote
+
+```bash
+git remote add <name> <url>
+```
+
+- Remove a remote
+
+```bash
+git remote remove <name>
+```
+
+- Rename a remote
+
+```bash
+git remote rename <old> <new>
+```
+
+- Push a repository to remote
+
+```bash
+git push <remote-name> <branch>
+```
+
+### Remote Tracking Branches
+
+A reference to the state of the branch on the remote.
+
+- View remote branches
+
+```bash
+git branch -r
+```
+
+- Pull a remote branch by creating a branch locally named exactly the same as the remote branch. By doing this, git sets up the local branch to track the remote branch automatically
+
+```bash
+git checkout <branch-name> or
+git switch <branch-name>
+```
+
+### git fetch
+
+- Take changes from the remote repository to the local repository (.git) and NOT into the working directory. These changes are not integrated into our working files. Download changes without integrating them.
+
+```bash
+git fetch or
+git fetch origin <branch-name>
+```
+
+### git pull
+
+- Take changes from the remote repository to the local repository (.git) and **merge** them into the current branch or working directory.
+
+```bash
+git pull
+```
