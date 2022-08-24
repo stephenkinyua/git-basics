@@ -321,3 +321,120 @@ git fetch origin <branch-name>
 ```bash
 git pull
 ```
+
+### git rebase
+
+Give my branch a new base at the tip of the branch I am merging to.
+Example: merge feature onto master
+
+```bash
+git swicth feature
+git rebase master
+```
+
+### interactive rebase
+
+Interactive rebase has a number of options and can be used to:
+
+1. delete coomits
+2. join together a number of commits
+3. reword the commit message
+
+- Go back 3 commits and rewrite history
+
+```bash
+git rebase -i HEAD~3
+```
+
+## Working with Git Tags
+
+Label pointing to a particular commit (moment in time). \
+Think of it as a sticky note on a commit marking important moments in the history of the repository. \
+It is commonly used to mark releases. ie When code is merged onto the master branch we have a new release.
+
+### Types of Tags
+
+1. Light Weight Tags - just a label that points to a commit
+2. Annotated Tags - a label with extra metadata
+
+### Tag Commands
+
+- List all tags in the current repository
+
+```bash
+git tag or
+git tag -l
+```
+
+- Filter the tags according to a certain pattern
+
+```bash
+git tag -l "*beta*" or
+git tag -l "v4*"
+```
+
+- Checkout a Tag
+
+```bash
+git checkout <tag>
+```
+
+- Compare two tags with the diff command
+
+```bash
+git diff <tag-one> <tag-two>
+```
+
+#### Lightweight Tags
+
+- Create a lightweight tag
+
+```bash
+git tag <tag-name> or
+git tag <tag-name> <commit-hash>
+```
+
+#### Annotated Tags
+
+- Create an annotated tag
+
+```bash
+git tag -a <tag-name> or
+git tag -a <tag-name> <commit-hash>
+```
+
+- Show the metadata for the anotated tag
+
+```bash
+git show <tag-name>
+```
+
+#### Modifying Tags
+
+- Change the commit that a tag points to by using the (-f | --force) flag
+
+```bash
+git tag <tag-name> <commit-hash> -f
+```
+
+#### 🚨 Deleting Tags
+
+- Delete a tag
+
+```bash
+git tag -d <tag-name>
+```
+
+#### Pushing Tags to a remote
+
+- Push a single tag
+
+```bash
+git push origin <tag-name>
+```
+
+- Push all tags
+
+```bash
+git push origin --tags
+```
